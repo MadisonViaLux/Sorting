@@ -117,29 +117,133 @@
 # print(find_value_binary(my_randoms, my_value))
 
 
-my_list = [8, 2, 5, 4, 1, 3]
+# my_list = [8, 2, 5, 4, 1, 3]
+#
+#
+# def insertion_sort(list_to_sort):
+#     # Separate the first element from the rest of the array. Think about it as a sorted list of one element.
+#
+#     # For all other indices, beginning with [1]:
+#     for i in range(1, len(list_to_sort)):
+#
+#         # a. Copy the item at that index into a temp variable
+#         temp = list_to_sort[i]
+#
+#         # b. Iterate to the left until you find the correct index in the "sorted" part of the array at which this element should be inserted
+#         j = i
+#         while j > 0 and temp < list_to_sort[j - 1]:
+#             print(j)
+#             # Shift items over to the right as you iterate
+#             list_to_sort[j] = list_to_sort[j - 1]
+#             j -= 1
+#         # c. When the correct index is found, copy temp into this position
+#         list_to_sort[j] = temp
+#
+#     return list_to_sort
+#
+#
+# print(insertion_sort(my_list))
 
 
-def insertion_sort(list_to_sort):
-    # Separate the first element from the rest of the array. Think about it as a sorted list of one element.
+# def recurse(number):
+#     if number == 0:
+#         return
+#     print(number)
+#     number -= 1
+#     recurse(number)
+#
+#
+# recurse(10)
 
-    # For all other indices, beginning with [1]:
-    for i in range(1, len(list_to_sort)):
-
-        # a. Copy the item at that index into a temp variable
-        temp = list_to_sort[i]
-
-        # b. Iterate to the left until you find the correct index in the "sorted" part of the array at which this element should be inserted
-        j = i
-        while j > 0 and temp < list_to_sort[j - 1]:
-            print(j)
-            # Shift items over to the right as you iterate
-            list_to_sort[j] = list_to_sort[j - 1]
-            j -= 1
-        # c. When the correct index is found, copy temp into this position
-        list_to_sort[j] = temp
-
-    return list_to_sort
+# def recurse(n):
+#     if n > 0:
+#         print(n)
+#         recurse(n-1)
 
 
-print(insertion_sort(my_list))
+# def recurse(number):
+#     if number <= 0:
+#         return
+#     print(number)
+#     number -= 1
+#     recurse(number)
+#
+#
+# recurse(5)
+
+# O(2^n)
+# def recurse(number):
+#     if number <= 0:
+#         return
+#     print(number)
+#     number -= 1
+#     recurse(number)
+#     recurse(number)
+#
+# recurse(3)
+
+
+
+
+# [5 9 3 7 2 8 1 6]
+
+# [3 2 1][5][9 7 8 6]
+
+# [2 1][3][][5][7 8 6][9][]
+
+# [1][2][3][5] [6][7][8] [9]
+
+
+# Decide on base case
+# base case is []
+
+# Find the pivot point
+
+# partition our data to the left and right of the pivot
+# left -> smaller than pivot, right -> larger than pivot
+# What if they're the same size as the pivot? Just pick one?  >=
+
+
+# repeat, recurse
+
+# my_list = [5, 9, 3, 7, 2, 8, 1, 6]
+# ​
+# ​
+#
+# def partition(data):
+#     left = []
+#     pivot = data[0]
+#     right = []
+#
+# ​
+# for item in data[1:]:
+#     if item < pivot:
+#         left.append(item)
+#     else:  # Handling > or =
+#         right.append(item)
+# ​
+# return left, pivot, right
+# ​
+#
+# def quicksort(data):
+#     if data == []:
+#         return data
+#
+#     left, pivot, right = partition(data)
+#
+# ​
+# return quicksort(left) + [pivot] + quicksort(right)
+# ​
+# print(quicksort(my_list))
+# ​
+# ​
+# ​
+# # print(5 in my_list)
+# ​
+# # def is_it_in_here(n):
+# #     for item in my_list:
+# #         if item == n:
+# #             return True
+# ​
+# #     else:
+# #         return False
