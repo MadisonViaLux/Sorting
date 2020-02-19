@@ -144,7 +144,7 @@
 #
 # print(insertion_sort(my_list))
 
-
+#_____________________________________________________________________________________________
 # def recurse(number):
 #     if number == 0:
 #         return
@@ -184,7 +184,7 @@
 
 
 
-
+#______________________________________________________________________________________________
 # [5 9 3 7 2 8 1 6]
 
 # [3 2 1][5][9 7 8 6]
@@ -247,3 +247,110 @@
 # ​
 # #     else:
 # #         return False
+#
+#____________________________________________________________________
+# 1. A recursive algorithm must have a base case.
+# 2. A recursive algorithm must change its state and move toward the base case.
+# 3. A recursive algorithm must call itself, recursively.
+
+# Print every number, starting at `number`, until you reach 0
+# def recurse(number):
+#     if number <= 0:
+#         return
+#     print(number)
+#     number -= 1
+#     recurse(number)
+#     recurse(number)
+
+
+# recurse(2)
+
+# Fibonacci Sequence [1, 1, 2, 3, 5, 8, 13, 21, 34]
+# Return the Nth Fibonacci Number
+
+# def fibonacci(n):
+#     if n < 0:
+#         print("Negative numbers are not valid")
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         # Return (n - 1) + (n - 2)
+#         return fibonacci(n - 1) + fibonacci(n - 2)
+#
+# print(fibonacci(10))
+
+
+
+
+
+# [7, 4, 8, 1, 2, 9, 3]
+#
+# [7, 4, 8,] [1, 2, 9, 3]
+#
+# [7] [4, 8] [1, 2] [9, 3]
+#
+# [7] [] [4] [8] [1] [2] [9] [3]
+#
+# [7] [4, 8] [1, 2] [3, 9]
+#
+# [4, 7, 8] [1, 2, 3, 9] # i += 1    k += 1
+#
+# [1, 2, 3, 4, 7, 8, 9]
+#
+# i
+# [7]
+# []
+# k += 1
+
+
+# def merge(arrA, arrB):
+#     elements = len(arrA) + len(arrB)
+#     merged_arr = [0] * elements
+#
+#     a = 0
+#     b = 0
+#
+#     for i in range(0, elements):
+#         if a >= len(arrA):
+#             merged_arr[i] = arrB[b]
+#             b += 1
+#         elif b >= len(arrB):
+#             merged_arr[i] = arrA
+#             a += 1
+#         elif arrA[a] <= arrB[b]:
+#             merged_arr[i] = arrA[a]
+#             a += 1
+#         else:
+#             merged_arr[i] = arrB[b]
+#             b += 1
+#
+#     return merged_arr
+#
+#
+#
+# def merge_sort(arr):
+#
+#     if len(arr) > 1:
+#         left = merge_sort(arr[0 : len(arr)//2])
+#         right = merge_sort(arr[len(arr) // 2:] )
+#         arr = merge(left, right)
+#
+#     return arr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
